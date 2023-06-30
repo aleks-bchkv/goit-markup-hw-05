@@ -372,9 +372,17 @@ address {
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
   background-color: transparent;
   padding-left: 38px;
+  outline: transparent;
+}
+
+.modal-input:focus {
+  border: 1px solid #4D5AE5;
+}
+.modal-input:focus + .input-icon {
+  stroke: #4D5AE5;
 }
 
 .input-title {
@@ -385,16 +393,112 @@ address {
   line-height: 14px;
   letter-spacing: 0.48px;
   color: var(--secondary-grey);
-  margin-bottom: 4px;
+  /* margin-bottom: 4px; */
 }
 
 .input-icon {
   position: absolute;
   left: 16px;
-  top: 12px;
+  /* top: 26px; */
+  top: 50%;
+  transform: translateY(-10%);
 }
-.input-title {
+
+.input-div {
   position: relative;
+}
+
+.modal-field {
+  margin-bottom: 8px;
+}
+
+.modal-textarea {
+  width: 100%;
+  height: 120px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  /* margin-bottom: 8px; */
+  background-color: transparent;
+  padding-left: 16px;
+  padding-top: 8px;
+  outline: transparent;
+  resize: none;
+
+}
+
+.modal-textarea::placeholder {
+color: rgba(46, 47, 66, 0.40);
+font-size: 12px;
+font-family: Roboto;
+font-style: normal;
+font-weight: 400;
+line-height: 1.21;
+letter-spacing: 0.48px;
+}
+
+.modal-textarea:focus {
+  border: 1px solid #4D5AE5;
+}
+
+.check-text {
+color: #8E8F99;
+font-size: 12px;
+font-family: Roboto;
+font-style: normal;
+font-weight: 400;
+line-height: 14px;
+letter-spacing: 0.48px;
+display: flex;
+align-items: center;
+}
+
+.check-text a {
+  color: #4D5AE5;
+  text-decoration: underline;
+}
+
+.check-text span {
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.40);
+  display: block;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+}
+
+.input-check:checked + .check-text span {
+  background-color: #404BBF;
+  fill: #ffffff;
+}
+
+.modal-send-btn {
+color: var(--white, #FFF);
+text-align: center;
+font-size: 16px;
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+line-height: 1.5; 
+letter-spacing: 0.64px;
+border-radius: 4px;
+border: none;
+background-color: var(--iris, #4D5AE5);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+display: inline-flex;
+padding: 16px 32px;
+cursor: pointer;
+display: flex;
+flex-direction: row;
+align-items:flex-end;
+}
+
+.modal-send-btn:is(:hover, :focus) {
+  background-color: var(--ocean, #404BBF);
+  border-color: transparent; 
 }
 
 /* Index page styles */
