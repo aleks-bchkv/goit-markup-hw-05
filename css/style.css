@@ -386,6 +386,7 @@ address {
 }
 
 .input-title {
+  display: block;
   font-size: 12px;
   font-family: Roboto;
   font-style: normal;
@@ -393,7 +394,7 @@ address {
   line-height: 14px;
   letter-spacing: 0.48px;
   color: var(--secondary-grey);
-  /* margin-bottom: 4px; */
+  margin-bottom: 4px;
 }
 
 .input-icon {
@@ -401,7 +402,7 @@ address {
   left: 16px;
   /* top: 26px; */
   top: 50%;
-  transform: translateY(-10%);
+  transform: translateY(-50%);
 }
 
 .input-div {
@@ -489,16 +490,23 @@ border: none;
 background-color: var(--iris, #4D5AE5);
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 display: inline-flex;
-padding: 16px 32px;
+min-width: 169px;
+height: 56px;
 cursor: pointer;
 display: flex;
-flex-direction: row;
-align-items:flex-end;
+justify-content: center;
+align-items:center;
+margin-left:auto;
+margin-right: auto;
 }
 
 .modal-send-btn:is(:hover, :focus) {
   background-color: var(--ocean, #404BBF);
   border-color: transparent; 
+}
+
+.modal-field-check {
+  margin-bottom: 24px;
 }
 
 .subscribe-form {
@@ -564,6 +572,7 @@ margin-left: 24px;
 display: flex;
 width: 165px;
 height: 40px;
+cursor: pointer;
 }
 .subscribe-btn:hover,
 .subscribe-btn:focus {
